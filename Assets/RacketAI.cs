@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RacketAI : MonoBehaviour {
 
-	public float speed = 30;
+	public float speed = 20;
 	public Transform ball;
 
 	// Use this for initialization
@@ -14,10 +14,10 @@ public class RacketAI : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		float x = ball.transform.position.x - transform.position.x;
-		if ( x > 4) {
+		if ( x > 2) {
 			GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
 		}
-		if ( x < -4) {
+		if ( x < -2) {
 			GetComponent<Rigidbody2D>().velocity = Vector2.left * speed;
 		}
 	}

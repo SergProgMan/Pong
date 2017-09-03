@@ -5,6 +5,7 @@ public class Ball : MonoBehaviour {
     public float speed = 30;
 
 	private GameManager gameManager;
+	public Vector2 startPosition;
 
 	void Start() {
 		PushOnStart ();
@@ -73,25 +74,13 @@ public class Ball : MonoBehaviour {
 
 		if (col.gameObject.name == "BorderAI") {
 			gameManager.AddScoreAI();
-			WaitAndResetPos ();
+			gameManager.WaitAndResetPosition ();
 		}
 
 		if (col.gameObject.name == "BorderPlayer") {
 			gameManager.AddScorePlayer ();
-			WaitAndResetPos ();
+			gameManager.WaitAndResetPosition ();
 		}
     }
 
-	void WaitAndResetPos()
-	{
-		gameManager.MoveControle ();
-		Invoke ("ResetPos", 1.0f);
-
-	}
-
-	void ResetPos(){
-		transform.position = new Vector2 (0, 0);
-		gameManager.MoveControle ();
-		PushOnStart ();
-	}
 }

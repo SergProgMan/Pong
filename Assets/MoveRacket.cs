@@ -4,6 +4,14 @@ using System.Collections;
 public class MoveRacket : MonoBehaviour {
     public float speed = 30;
 
+	public Vector2 startPosition;
+
+	void Start(){
+		startPosition = transform.position;
+	}
+
+
+
     void FixedUpdate () {
         float v = Input.GetAxisRaw("Horizontal");
         
@@ -22,4 +30,5 @@ public class MoveRacket : MonoBehaviour {
 	void Move(float v){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(v, 0) * speed;
 	}
+
 }

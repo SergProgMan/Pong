@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour {
 	public void MoveControle(){
 		if (canMove) {
 			canMove = false;
+			ResetPosition ();
 		} else {
 			canMove = true;
 		}
@@ -53,5 +54,18 @@ public class GameManager : MonoBehaviour {
 		{
 			g.GetComponent<Rigidbody2D> ().simulated = canMove;
 		}
+	}
+
+	public void WaitAndResetPosition()
+	{
+		MoveControle ();
+		Invoke ("MoveControle", 1f);
+	}
+
+	void ResetPosition(){
+		foreach (GameObject g in objectsToStop) {
+			g.transform.position = g.GetComponent<startPosition>;
+		}
+
 	}
 }

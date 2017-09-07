@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GUIManager.cs">
     <Files>
-      <File FileName="Assets\Ball.cs" Line="8" Column="8" />
-      <File FileName="Assets\MoveRacket.cs" Line="7" Column="8" />
-      <File FileName="Assets\RacketAI.cs" Line="19" Column="16" />
-      <File FileName="Assets\GameManager.cs" Line="67" Column="55" NotebookId="1" />
+      <File FileName="Assets\ResetPosition.cs" Line="7" Column="31" />
+      <File FileName="Assets\GameManager.cs" Line="23" Column="18" NotebookId="1" />
+      <File FileName="Assets\GUIManager.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

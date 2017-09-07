@@ -4,10 +4,9 @@ using System.Collections;
 public class MoveRacket : MonoBehaviour {
     public float speed = 30;
 
-	public Vector2 startPosition;
 
 	void Start(){
-		startPosition = transform.position;
+
 	}
 
 

@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 	private int scorePlayer;
 
 	bool canMove = true;
-	GameObject [] objectsToStop;
+	public GameObject [] objectsToStop;
 
 	void Start () {
 		
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
 	public void MoveControle(){
 		if (canMove) {
 			canMove = false;
-			ResetPosition ();
+			ResetPositionForAll ();
 		} else {
 			canMove = true;
 		}
@@ -62,9 +62,9 @@ public class GameManager : MonoBehaviour {
 		Invoke ("MoveControle", 1f);
 	}
 
-	void ResetPosition(){
+	void ResetPositionForAll(){
 		foreach (GameObject g in objectsToStop) {
-			g.transform.position = g.GetComponent<startPosition>;
+			g.GetComponent<ResetPosition>().ResPos();
 		}
 
 	}

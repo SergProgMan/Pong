@@ -11,12 +11,12 @@ public class RacketAI : MonoBehaviour {
 
 	private Rigidbody2D rigidBody;
 
-	public Vector2 startPosition;
+
 
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody2D> ();
-		startPosition = transform.position;
+
 	}
 
 	// Update is called once per frame

@@ -5,7 +5,7 @@ public class Ball : MonoBehaviour {
     public float speed = 30;
 
 	private GameManager gameManager;
-	public Vector2 startPosition;
+
 
 	void Start() {
 		PushOnStart ();

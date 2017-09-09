@@ -73,12 +73,12 @@ public class Ball : MonoBehaviour {
         }
 
 		if (col.gameObject.name == "BorderAI") {
-			gameManager.AddScoreAI();
+			gameManager.AddScorePlayer();
 			gameManager.WaitAndResetPosition ();
 		}
 
 		if (col.gameObject.name == "BorderPlayer") {
-			gameManager.AddScorePlayer ();
+			gameManager.AddScoreAI();
 			gameManager.WaitAndResetPosition ();
 		}
     }

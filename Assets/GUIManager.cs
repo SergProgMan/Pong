@@ -1,16 +1,34 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GUIManager : MonoBehaviour {
 
+	public Button pauseButton;
+	public Button exitButton;
+
+	bool pause;
+
+
 	// Use this for initialization
 	void Start () {
-		
+		Button btnPause = pauseButton.GetComponent<Button> (); 
+		Button btnExit = exitButton.GetComponent<Button> (); 
+
+		btnPause.onClick.AddListener (ClickPause);
+		btnExit.onClick.AddListener (ClickExit);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void ClickPause () {
+		if (pause == false) {
+			Time.timeScale = 0;
+		} else {
+			Time.timeScale = 1;
+		}
+	}
+
+	void ClickExit(){
+		Application.Quit ();
 	}
 }
